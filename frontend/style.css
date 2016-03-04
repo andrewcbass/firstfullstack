@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  background-color: #F57D26;
+}
+.sqResult {
+  display: none;
+}
+
+.sumResult {
+  display: none;
+}
+
+.sentResult {
+  display: none;
+}
+
+.ageResult {
+  display: none;
+}
+
+button, input {
+  margin: 5px;
+}
