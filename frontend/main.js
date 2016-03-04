@@ -75,7 +75,12 @@ function sentence() {
     url:`http://localhost:3000/sentence/${sent}`,
     success: function (data) {
       $('.sentResult').show();
-      $('.sentResult span').append(data);
+      var sentOb = JSON.parse(data);
+      var avg = Math.round(sentOb.avgWordCount * 100) / 100;
+
+      $('.sentResult span').text('Your sentence had ' + sentOb.letterCount +
+      ' letters, and ' + sentOb.wordCount + ' words for an average of ' +
+      avg + ' letters / word.' );
     },
     error: function(err) {
       console.log("ERROR: ", err);
